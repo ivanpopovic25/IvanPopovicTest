@@ -21,38 +21,17 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage(driver);
     }
 
-    // @Test
-    // public void loginUserTest(){
-    //     loginPage.goToLoginPage();
-    //     loginPage.loginUser("1", "1");
-    //     Assert.assertTrue(false);
-    // }
+
 
     @Test(dataProvider = "loginDataProvider", dataProviderClass = DataProviders.class)
     public void invalidLoginTest(String username, String password){
         loginPage.goToLoginForm()
                 .loginUser(username, password);
-        //Utils.waitForSeconds(2);
+       
         Assert.assertTrue(loginPage.isErrorMessagePresent());
     }
 
-    // @Test
-    // public void invalidLoginFromJsonTest(){
-    //     List<LoginUser> list = Utils.getDataFromJson();
-    //     for (int i = 0; i < list.size(); i++) {
-    //          loginPage.goToLoginForm()
-    //                  .loginUser(list.get(i).getUsername(), list.get(i).getPassword());
-    //         Assert.assertTrue(loginPage.isErrorMessagePresent());
-    //     }
-    // }
-
-    // @Test(groups = {"smoke", "regression"})
-    // @Parameters({"username", "password"})
-    // public void loginUserFromTestNgXmlTest(String username, String password){
-    //     loginPage.goToLoginForm()
-    //             .loginUser(username, password);
-    //     Assert.assertTrue(false);
-    // }
+ 
 
 
 }

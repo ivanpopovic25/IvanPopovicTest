@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.BasketPage;
 import pages.LoginPage;
-import pages.RegisterPage;
 
 public class BasketTest extends BaseTest {
 

@@ -27,17 +27,17 @@ public class BasePage {
         element.sendKeys(text);
     }
 
-    protected void clickOnElement(By locator){
+    protected void clickOnElement(By categories){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(categories)).click();
         }catch (ElementClickInterceptedException cl){
             cl.printStackTrace();
-            wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
+            wait.until(ExpectedConditions.presenceOfElementLocated(categories)).click();
         }catch (TimeoutException t){
-            getElement(locator).click();
+            getElement(categories).click();
         }catch (Exception e){
-            WebElement element = getElement(locator);
+            WebElement element = getElement(categories);
             js.executeScript("arguments[0].click();", element);
         }
     }
