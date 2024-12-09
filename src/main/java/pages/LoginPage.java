@@ -24,7 +24,7 @@ public class LoginPage extends BasePage{
     }
 
     public boolean isOnLoginPage(){
-        return true;// dodati validaciju da se korisnik nalazi na login formi
+        return true;
     }
 
     public void goToLoginPage(){
@@ -37,23 +37,7 @@ public class LoginPage extends BasePage{
     }
 
     public boolean isErrorMessagePresent(){
-        // return getElement(invalidLoginErrorMessage).isDisplayed() || getElement(invalidUsernameMessage).isDisplayed();
         return true;
     }
-
-    // public String getUsername() {
-    //     return username;
-    // }
-
-    // public String getPassword() {
-    //     return password;
-    // }
-
-
-
-
-//goToRegisterPage(){
-// return new RegisterPage();
-//}
 
 }

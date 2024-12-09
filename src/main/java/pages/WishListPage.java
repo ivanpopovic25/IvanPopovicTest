@@ -54,10 +54,9 @@ public class WishListPage extends BasePage {
 
     public boolean isProductExists(String productName){
         try {
-            // Try to find the element by ID
+            
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[contains(text(),'" + productName + "')]")));
-            // productFav = By.xpath("//h5[contains(text(),'Combination Pliers')]");
             System.out.println("Element exists!");
             return true;
         } catch (Exception  e) {

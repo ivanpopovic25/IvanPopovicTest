@@ -21,8 +21,6 @@ public class PowerToolsPage extends BasePage {
 
     private By categories = By.cssSelector("a[data-test='nav-categories']");
     private By powerTools = By.cssSelector("a[data-test='nav-power-tools']");
-    // WebElement drill = driver.findElement(By.cssSelector("input.icheck"));
-    // label[text()='Drill']/preceding-sibling::input
     public By drill = By.xpath("//label[contains(text(), 'Drill')]/preceding-sibling::input[@type='checkbox']");
 
     private int productCountBefore;
